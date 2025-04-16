@@ -1,0 +1,33 @@
+Initial Reflection:
+
+When approaching this Python implementation, my main goals were to:
+1. Maintain the same game logic as the Java version
+2. Take advantage of Python's features to simplify some code
+3. Ensure the implementation remained true to the game rules
+
+Key differences from the Java version:
+1. Used Python list comprehensions for more concise code
+2. Leveraged Python's dynamic typing (no need for separate Player class file)
+3. Simplified array copying with the copy() method
+4. Used f-strings for cleaner string formatting
+
+Challenges Encountered:
+
+1. The circular board movement logic required careful testing to ensure it worked correctly in Python
+2. I had to adjust some of the index calculations to match Python's 0-based indexing
+3. The capture rule implementation needed special attention to ensure it worked the same as in the Java version
+
+Final Reflection:
+
+The Python implementation ended up being more concise while maintaining all the same functionality. Some key improvements:
+
+1. The board state checking became more readable with list comprehensions
+2. The print_board() method is more straightforward with f-strings
+3. Python's dynamic typing made the Player class simpler to implement
+
+Key Takeaways:
+
+1. Python's features can significantly reduce boilerplate code while maintaining clarity
+2. The core game logic remains the same regardless of language
+3. Careful testing is still essential to ensure all game rules are properly implemented
+4. The single-array board representation works well in both languages
