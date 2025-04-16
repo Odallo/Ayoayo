@@ -1,3 +1,4 @@
+print("Script has started")
 class Player:
     def __init__(self, name, player_number):
         self.name = name
