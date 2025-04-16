@@ -122,3 +122,29 @@ class Ayoayo:
 
     def _get_board_state(self):
         return self.__board.copy()
+
+# Add the interactive game loop here
+if __name__ == "__main__":
+    game = Ayoayo()
+    player1 = game.create_player(input("Enter Player 1 name: "))
+    player2 = game.create_player(input("Enter Player 2 name: "))
+    
+    print("\nInitial board:")
+    game.print_board()
+    
+    current_player = 1
+    while not game._Ayoayo__game_ended:
+        try:
+            pit = int(input(f"\nPlayer {current_player} ({game._Ayoayo__player1.name if current_player == 1 else game._Ayoayo__player2.name}), choose pit (1-6): "))
+            result = game.play_game(current_player, pit)
+            game.print_board()
+            
+            # Only switch players if no extra turn
+            if not ("take another turn" in str(result)):
+                current_player = 2 if current_player == 1 else 1
+                
+        except ValueError:
+            print("Please enter a number 1-6")
+    
+    print("\nGame Over!")
+    print(game.return_winner())
