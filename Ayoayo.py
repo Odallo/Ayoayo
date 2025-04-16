@@ -58,7 +58,7 @@ class Ayoayo:
         self._check_game_end()
         
         if extra_turn and not self.__game_ended:
-            print(f"player {player_index} take another turn")
+            print(f"player {player_index} take another trn")
         
         return self._get_board_state()
 
@@ -69,7 +69,6 @@ class Ayoayo:
         
         while seeds > 0:
             current_pit = (current_pit + 1) % 14
-            
             
             if (player_index == 1 and current_pit == 13) or (player_index == 2 and current_pit == 6):
                 continue
@@ -111,7 +110,7 @@ class Ayoayo:
         if p1_empty or p2_empty:
             self.__game_ended = True
             
-            # Collect remaining seeds
+            #remaining seeds
             if p1_empty:
                 self.__board[13] += sum(self.__board[7:13])
                 for i in range(7, 13):
